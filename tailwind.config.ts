@@ -29,11 +29,6 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-circular-std)"],
       },
-      backgroundImage: {
-        "hero-vector": "url('/assets/images/vector-1.png'), url('/assets/images/decorator.png')",
-        "services-vector": "url('/assets/images/decorator.png')",
-        decorator: "url('/assets/images/decorator.png')",
-      },
     },
   },
   plugins: [],

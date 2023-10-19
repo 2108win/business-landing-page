@@ -10,6 +10,7 @@ type ButtonProps = {
   isGhost?: boolean;
   size: "sm" | "md" | "lg";
   icon?: string;
+  styleCustom?: any;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,10 +22,12 @@ const Button: React.FC<ButtonProps> = ({
   isGhost,
   size,
   icon,
+  styleCustom,
 }) => {
   return (
     <button
       type={type}
+      style={styleCustom}
       className={`py-3 md:py-5 flex items-center justify-center rounded-full font-medium transition-all duration-300 leading-5
     ${
       isPrimary &&
@@ -36,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
     }
     ${isGhost && `px-0 bg-transparent text-primaryText`}
     ${size === "sm" && `py-[12px] md:py-[14px] text-[12px] md:text-[14px]`}
-    ${size === "md" && `py-[15px] md:py-[17px] text-[14px] md:text-[16x]`}
+    ${size === "md" && `py-[15px] md:py-[17px] text-[14px] md:text-[16px]`}
     ${size === "lg" && `py-[17px] md:py-[19px] text-[14px] md:text-[16px]`}
     ${styles} 
     `}

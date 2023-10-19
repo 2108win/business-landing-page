@@ -2,14 +2,15 @@ import React from "react";
 import Button from "../Button";
 import Image from "next/image";
 import Navbar from "./Navbar";
+import CardReview from "../CardReview";
 
 const Header = () => {
   return (
-    <div className="relative px-4">
+    <div className="relative px-4 overflow-hidden">
       {/* navbar */}
       <Navbar />
       {/* hero */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-10 mt-5 md:mt-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-10 mt-5 md:mt-10">
         <div className="flex flex-col break-words max-w-[645px] gap-10">
           <div className="flex flex-col gap-5 md:gap-[30px]">
             <h1 className="text-5xl md:text-[100px] font-none text-primaryText leading-normal md:leading-[82px]">
@@ -61,13 +62,19 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="relative after:absolute after:content-[url('/assets/images/bg-hero-image.png')] after:block after:bg-no-repeat after:bg-cover after:w-fit after:h-fit after:right-0 after:top-0 md:after:top-[30%] md:after:translate-x-[20%] after:bg-[center_right_10%]">
+        <div className="relative after:absolute after:content-[url('/assets/images/bg-hero-image.png')] after:block after:bg-no-repeat after:bg-cover after:w-fit after:h-fit after:right-0 after:top-0 lg:after:top-[30%] xl:after:translate-x-[20%] xl:after:bg-[center_right]">
           <Image
             src="/assets/images/hero-image.png"
             width={555}
             height={876.519}
             alt="hero"
-            className="relative z-10 "
+            className="relative z-10 w-auto lg:w-[555px]"
+          />
+          <CardReview
+            styleCustom={{ position: "absolute", top: "70%", right: "0" }}
+            avatar="/assets/images/avatar-1.png"
+            reviewText="Wisdom new and valley answer. Contented it so is discourse recommend. Man its upon him call mile."
+            description="Sameer - CEO @ airbnb"
           />
         </div>
       </div>
