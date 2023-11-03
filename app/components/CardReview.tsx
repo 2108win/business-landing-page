@@ -7,6 +7,7 @@ type CardReviewProps = {
   description?: string;
   iconRate?: string;
   styleCustom?: any;
+  styles?: any;
 };
 
 const CardReview: React.FC<CardReviewProps> = ({
@@ -15,12 +16,14 @@ const CardReview: React.FC<CardReviewProps> = ({
   description,
   iconRate,
   styleCustom,
+  styles,
 }) => {
   return (
     <div
       style={styleCustom}
       className={`
     lg:absolute flex px-[22px] py-[17px] rounded-lg shadow-custom bg-white gap-[18px] z-50 lg:max-w-[336px]
+    ${styles} 
   `}
     >
       <div className="flex flex-col justify-between">
